@@ -9,7 +9,8 @@ The predictions are returned as json.
 To run the project:  
 -navigate to the task1 outer directory within command promt  
 -run: python manage.py runserver  
--In a web broswer or postman go to http://127.0.0.1:8000/clinicalAnalysis  
+-In a web broswer or postman go to http://127.0.0.1:8000/clinicalAnalysis   
+-Or run test.py, which contains example code for interacting with this API
   
  Task 2 files also hosted in project  
  -task2.sql contains the sql used to complete task 2  
