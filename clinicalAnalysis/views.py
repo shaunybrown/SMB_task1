@@ -1,3 +1,4 @@
+#take the request and return a response
 from django.shortcuts import render
 import sklearn.externals.joblib
 import pandas as pd
