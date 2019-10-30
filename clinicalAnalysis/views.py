@@ -8,6 +8,6 @@ def index(request):
     X = csv.drop(["Has_Fancy_Title","Name_Length","Survived", "Predictions"],axis=1).astype({"Pclass":"int", "Sex":"bool", "Age":"int", "SibSp":"int", "Parch":"int", "Fare":"float", "Embarked_S": "bool", "Embarked_C":"bool"})
     #Above: drop unneeded columns and set column types
     model = sklearn.externals.joblib.load('docs/source/model_python.pkl')
-    predictions = model.predict_proba(X)
-    results = predictions[:,1].tolist()
-    return JsonResponse(results, safe=False)
+    predictions = model.predict_proba(X) 
+    results = predictions[:,1].tolist() #creates a list of the returned predictions
+    return JsonResponse(results, safe=False) #false to allow for non dict to returned as json
